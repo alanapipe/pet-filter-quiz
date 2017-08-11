@@ -1,0 +1,540 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Pet Filter</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- NBC CSS -->
+    <link href="css/nbcotsbase.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,300,100' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Arimo:400,700' rel='stylesheet' type='text/css'>
+
+    <link href="css/petfilter.css" rel="stylesheet">
+
+    <!-- Responsive iFrame stuff -->
+    <!--
+    <script src="http://data.nbcstations.com/js/crosstalk.js"></script>
+    <script type="text/javascript">
+         document.addEventListener("DOMContentLoaded", function() {
+            xtalk.responsive = false;
+            xtalk.init();
+         });
+    </script>
+    -->
+  </head>
+
+  <body>
+    <!-- Start content here -->
+    <div class="container1">
+
+      <div class="row">
+        <div class="col-6">
+
+          <div class="filters">
+
+              <p class="filtercopy">I want a dog who is </p>
+              <div class="button-group" data-filter-group="size">
+                  <button id="small-button" class="filterbtn" data-filter="smallsize">small</button>
+                  <button id="medium-button" class="filterbtn" data-filter="mediumsize">medium</button>
+                  <button id="large-button" class="filterbtn" data-filter="largesize">large</button>
+                  <button id="any-size" class="filterbtn" data-filter="anysize">any size</button>
+                </div>
+
+              <p class="filtercopy"> and one who is </p>
+              <div class="button-group" data-filter-group="allergies">
+                  <button id="hypoallergenic-yes-button" class="filterbtn" data-filter="hypoallergenic">hypoallergenic</button>
+                  <button id="hypoallergenic-no-button" class="filterbtn" data-filter="nonhypoallergenic">any type</button>
+              </div>
+
+              <p class="filtercopy"> Having a companion who is a service dog</p>
+              <div class="button-group" data-filter-group="service">
+                  <button id="servicedog-yes-button" class="filterbtn" data-filter="servicedog">is</button>
+                  <button id="servicedog-no-button" class="filterbtn" data-filter="notservicedog">is not</button>
+              </div>
+
+              <p class="filtercopy"> particularly important to me. In terms of exercise, I can manage a couple of</p>
+              <div class="button-group" data-filter-group="exercise">
+                  <button id="short-walks-button" class="filterbtn" data-filter="shortwalks">short</button>
+                  <button id="medium-walks-button" class="filterbtn" data-filter="mediumwalks">medium</button>
+                  <button id="long-walks-button" class="filterbtn" data-filter="longwalks">long</button>
+                  <button id="any-length-walks-button" class="filterbtn" data-filter="anylength">any length</button>
+              </div>
+
+              <p class="filtercopy">walks each day, and to have a pup who could be my running buddy would be</p>
+              <div class="button-group" data-filter-group="run">
+                  <button id="running-button" class="filterbtn" data-filter="running">ideal</button>
+                  <button id="norunning-button" class="filterbtn" data-filter="norunning">irrelevant</button>
+              </div>
+
+              <p class="filtercopy">I'm ready to deal with a</p>
+              <div class="button-group" data-filter-group="shed">
+                  <button id="light-shed-button" class="filterbtn" data-filter="lightshed">light</button>
+                  <button id="medium-shed-button" class="filterbtn" data-filter="mediumshed">moderate</button>
+                  <button id="heavy-shed-button" class="filterbtn" data-filter="anyshed">any</button>
+                  <p class="filtercopy">amount of shedding.</p>
+              </div>
+
+            </div><!--closes filters-->
+
+        </div>
+
+        <div class="col-6">
+          <div class="grid">
+
+              <!--<div class="bulldog-all">-->
+            <div id="bulldog" class="bulldog-info norunning nonhypoallergenic shortwalks anylength notservicedog smallsize anysize lightshed mediumshed anyshed item"
+                data-name="Bulldog"
+                data-text="These small and gregarious dogs generally have docile temperments and don't require
+                as long of a walk as some other pups. While they aren't hypoallergenic, they are light shedders
+                and can be a great choice for devoted first-time owners.">
+
+              <div class="th">
+                <div class="thimg">
+                  <img src="images/bulldog.jpg">
+                </div>
+                <div class="thlabel">Bulldog</div>
+              </div>
+
+            </div>
+
+              <div id="german-shephard" class="running norunning nonhypoallergenic longwalks anylength servicedog notservicedog largesize anysize anyshed item"
+                  data-name="German Shepherd"
+                  data-text="German shepherds are smart and hardworking dogs who are highly devoted to their owners. While
+                  they require lots of mental stimulation and exercise, they make excellent service dogs, running partners and best friends.">
+
+                  <div class="th">
+                    <div class="thimg">
+                      <img src="images/german-shephard.jpg">
+                    </div>
+                    <div class="thlabel">German Shepherd</div>
+                  </div>
+
+              </div>
+
+
+
+              <div id="mastiff" class="norunning nonhypoallergenic mediumwalks anylength servicedog notservicedog largesize anysize mediumshed anyshed item"
+                    data-name="Mastiff"
+                    data-text="Generally considered the largest dog breed in the world, mastiffs are good-natured and calm canines who can make great service dogs and
+                    companions. Despite their sheer size, they need only a moderate amount of walking each day, and shed a small to medium amount.">
+
+                    <div class="th">
+                      <div class="thimg">
+                        <img src="images/mastiff.jpg">
+                      </div>
+                      <div class="thlabel">Mastiff</div>
+                    </div>
+
+              </div>
+
+              <div id="chihuahua" class="norunning nonhypoallergenic shortwalks anylength notservicedog smallsize anysize mediumshed anyshed item"
+                data-name="Chihuahua"
+                data-text="They may be yappy in the movies, but these small dogs very often have low-maintenance personalities. Short-haired and medium-shedders,
+                   chihuahuas need less exercise than most dogs and can be perfectly content in smaller apartments.">
+
+                   <div class="th">
+                     <div class="thimg">
+                       <img src="images/chihuahua.jpg">
+                     </div>
+                     <div class="thlabel">Chihuahua</div>
+                   </div>
+
+              </div>
+
+
+              <div id="aussie-shephard" class="running norunning nonhypoallergenic mediumwalks longwalks anylength servicedog notservicedog smallsize mediumsize anysize anyshed item"
+                    data-name="Australian Shepherd"
+                    data-text="Australian shepherds have colorful coats and personalities. Highly intelligent and full of energy, they require
+                    lots of mental stimulation and exercise but are some of the most affectionate dogs around. Even though their bushy coats mean
+                    lots of shedding in the summer, they make great running partners.">
+
+                    <div class="th">
+                      <div class="thimg">
+                        <img src="images/aussie-shephard.jpg">
+                      </div>
+                      <div class="thlabel">Australian Shepherd</div>
+                    </div>
+
+              </div>
+
+
+              <div id="pitbull" class="norunning nonhypoallergenic mediumwalks longwalks anylength notservicedog mediumsize largesize anysize mediumshed anyshed item"
+                  data-name="Pit Bull Terrier"
+                  data-text="While pit bull terriers with negligent owners are frequently stigmatized, a pit bull
+                   who lives in a loving home is one of the friendliest and most docile breeds around. Pit bulls love being around people and need
+                   lots of exercise. They make great companions and are generally medium shedders.">
+
+                   <div class="th">
+                     <div class="thimg">
+                       <img src="images/pitbull.jpg">
+                     </div>
+                     <div class="thlabel">Pit Bull</div>
+                   </div>
+
+              </div>
+
+              <div id="great-dane" class="norunning nonhypoallergenic mediumwalks anylength servicedog notservicedog largesize anysize anyshed item"
+                    data-name="Great Dane"
+                    data-text="Far larger than the average dog, great danes are often referred to as 'gentle giants' for their
+                    noble and dignified personalities. While they tend to shed a lot, they make good service dogs, are obedient
+                    and need a moderate amount of walking each day.">
+
+                    <div class="th">
+                      <div class="thimg">
+                        <img src="images/great-dane.jpg">
+                      </div>
+                      <div class="thlabel">Great Dane</div>
+                    </div>
+
+              </div>
+
+              <div id="dachshund" class="norunning nonhypoallergenic mediumwalks anylength notservicedog smallsize anysize mediumshed anyshed item"
+                    data-name="Dachshund"
+                    data-text="These short-legged affectionate weiner dogs love to be the center of attention. While they may act aggressively
+                     toward some other dogs, they're all bark and no bite. Nice and compact, these pups usually do fine in apartments, are regular
+                      shedders and require a medium amount of walking each day.">
+
+                      <div class="th">
+                        <div class="thimg">
+                          <img src="images/dachshund.jpg">
+                        </div>
+                        <div class="thlabel">Dachshund</div>
+                      </div>
+
+              </div>
+
+            <div id="maltese" class="norunning hypoallergenic nonhypoallergenic shortwalks anylength notservicedog smallsize anysize lightshed mediumshed anyshed item"
+                  data-name="Maltese"
+                  data-text="These gentle and affectionate dogs belong to the 'toy' group and can be perfectly happy in
+                  smaller houses and apartments. They are light-shedding, hypoallergenic, and need only a moderate amount of exercise each day.">
+
+                  <div class="th">
+                    <div class="thimg">
+                      <img src="images/maltese.jpg">
+                    </div>
+                    <div class="thlabel">Maltese</div>
+                  </div>
+
+            </div>
+
+
+            <div id="yorkie" class="norunning hypoallergenic nonhypoallergenic shortwalks anylength notservicedog smallsize anysize lightshed mediumshed anyshed item"
+                  data-name="Yorkie"
+                  data-text="Yorkies are small, compact and can manage in a smaller living space. While they require more attention
+                  than some dogs, they are very loving and require only a short amount of walking each day.">
+
+                  <div class="th">
+                    <div class="thimg">
+                      <img src="images/yorkie.jpg">
+                    </div>
+                    <div class="thlabel">Yorkie</div>
+                  </div>
+            </div>
+
+
+            <div id="afghan-hound" class="norunning hypoallergenic nonhypoallergenic longwalks anylength notservicedog largesize anysize lightshed mediumshed anyshed item"
+                  data-name="Afghan Hound"
+                  data-text="Known for their silky manes, towering physique and aloof personalities, Afghan hounds can be incredibly playful.
+                   They love long walks on the beach and in the park. Both hypoallergenic and light-shedders, these hounds are incredibly dignified (and a tiny bit silly).">
+
+                   <div class="th">
+                     <div class="thimg">
+                       <img src="images/afghan-hound.jpg">
+                     </div>
+                     <div class="thlabel">Afghan Hound</div>
+                   </div>
+            </div>
+
+            <div id="portuguese-water-dog" class="running norunning hypoallergenic nonhypoallergenic mediumwalks longwalks anylength notservicedog smallsize mediumsize anysize lightshed mediumshed anyshed running item"
+                  data-name="Portuguese Water Dog"
+                  data-text="Portuguese water dogs get their name from the old days when they were used to herd fish into fishermen's nets! Today Portuguese water dogs are more commonly
+                  employed as service dogs or family pets, since they are highly obedient and intelligent. As well as being relatively small and hypoallergenic, these pups are light shedders.">
+
+                  <div class="th">
+                    <div class="thimg">
+                      <img src="images/portuguese-water-dog.jpg">
+                    </div>
+                    <div class="thlabel">Portuguese Water Dog</div>
+                  </div>
+            </div>
+
+            <div id="airedale-terrier" class="running norunning hypoallergenic nonhypoallergenic mediumwalks longwalks anylength notservicedog mediumsize anysize lightshed mediumshed anyshed item"
+                  data-name="Airedale Terrier"
+                  data-text="Airedale terriers are high energy as puppies before they grow into mature adult dogs. Very intelligent, they require lots of games,
+                  tricks and exercise to keep them mentally stimulated (they can be professional chewers when left alone for too long). They also happen to be hypoallergenic,
+                  are light shedders, and have the capacity to go on long runs.">
+
+                  <div class="th">
+                    <div class="thimg">
+                      <img src="images/airedale-terrier.jpg">
+                    </div>
+                    <div class="thlabel">Airedale Terrier</div>
+                  </div>
+
+            </div>
+
+            <div id="giant-schnauzer" class="running norunning hypoallergenic nonhypoallergenic mediumwalks longwalks anylength servicedog notservicedog largesize anysize lightshed mediumshed anyshed item"
+                  data-name="Giant Schnauzer"
+                  data-text="Giant schnauzers are alert and loving dogs who make great companions and service dogs.
+                  Both hypoallergenic and light shedders, giant schnauzers require a normal amount of walking each day, and make great running buddies.">
+
+
+                  <div class="th">
+                    <div class="thimg">
+                      <img src="images/giant-schnauzer.jpg">
+                    </div>
+                    <div class="thlabel">Giant Schnauzer</div>
+                  </div>
+
+            </div>
+
+            <div id="schnauzer" class="norunning hypoallergenic nonhypoallergenic mediumwalks anylength servicedog notservicedog mediumsize anysize lightshed mediumshed anyshed item"
+                data-name="Schnauzer"
+                data-text="Schnauzers are medium sized alert and loving dogs who make great companions and service dogs.
+                Both hypoallergenic and light shedders, schnauzers require a normal amount of walking each day.">
+
+                <div class="th">
+                  <div class="thimg">
+                    <img src="images/schnauzer.jpg">
+                  </div>
+                  <div class="thlabel">Schnauzer</div>
+                </div>
+
+            </div>
+
+            <div id="italian-greyhound" class="running norunning hypoallergenic nonhypoallergenic mediumwalks longwalks anylength servicedog notservicedog smallsize anysize lightshed mediumshed anyshed item"
+                  data-name="Italian Greyhound"
+                  data-text="These sweet dogs are generally easygoing, and they make great running buddies. Hypoallergenic,
+                   and small enough to live in an apartment, these pups can be a great fit for someone who loves exercise.">
+
+                   <div class="th">
+                     <div class="thimg">
+                       <img src="images/italian-greyhound.jpg">
+                     </div>
+                     <div class="thlabel">Italian Greyhound</div>
+                   </div>
+            </div>
+
+
+            <div id="border-terrier" class="norunning hypoallergenic nonhypoallergenic mediumwalks longwalks anylength notservicedog smallsize anysize lightshed mediumshed anyshed item"
+                  data-name="Border Terrier"
+                  data-text="Good natured, loyal, and alert, border terriers are hypoallergenic and shed only a small amount.
+                  They need at least two walks each day and can usually adapt to apartment life.">
+
+                  <div class="th">
+                    <div class="thimg">
+                      <img src="images/border-terrier.jpg">
+                    </div>
+                    <div class="thlabel">Border Terrier</div>
+                  </div>
+            </div>
+
+            <div id="poodle" class="running norunning hypoallergenic nonhypoallergenic longwalks anylength servicedog notservicedog mediumsize anysize lightshed mediumshed anyshed item"
+                  data-name="Poodle"
+                  data-text="Some of the most intelligent dogs around, poodles are highly trainable and require lots of attention
+                  and affection. A good choice for runners or devoted walkers, poodles are hypoallergenic, light-shedders, and are highly loyal companions.">
+
+                  <div class="th">
+                    <div class="thimg">
+                      <img src="images/poodle.jpg">
+                    </div>
+                    <div class="thlabel">Poodle</div>
+                  </div>
+
+            </div>
+
+
+            <div id="border-collie" class="running norunning nonhypoallergenic longwalks anylength servicedog notservicedog mediumsize anysize anyshed item"
+                  data-name="Border Collie"
+                  data-text="Border collies are upbeat dogs who usually are full of adoration for their owners. Both highly intelligent and active, border collies make good pets for
+                  owners who can spend lots of time learning tricks and going for walks. Despite their long bushy coats and smaller size, these canines are excellent runners.">
+
+                  <div class="th">
+                    <div class="thimg">
+                      <img src="images/border-collie.jpg">
+                    </div>
+                    <div class="thlabel">Border Collie</div>
+                  </div>
+
+            </div>
+
+
+            <div id="husky" class="running norunning nonhypoallergenic longwalks anylength notservicedog largesize anysize anyshed item"
+                  data-name="Husky"
+                  data-text="These large fluffy dogs are incredibly loving and affectionate, and they benefit from lots of attention.
+                  While they are heavy shedders and require more space than most dogs, their incredible stamina makes them a great companion for serious distance runners.">
+
+                  <div class="th">
+                    <div class="thimg">
+                      <img src="images/husky.jpg">
+                    </div>
+                    <div class="thlabel">Husky</div>
+                  </div>
+
+            </div>
+
+            <div id="vizsla" class="running norunning nonhypoallergenic mediumwalks longwalks anylength notservicedog mediumsize anysize mediumshed anyshed item"
+                  data-name="Vizsla"
+                  data-text="These gentle and sensitive dogs crave affection and are great dogs for families. In addition to needing
+                  a great deal of attention they need lots of exercise and are great for people who love to run. Short-haired and medium sized,
+                   vizslas shed a moderate amount and need more space than an apartment to live in.">
+
+                   <div class="th">
+                     <div class="thimg">
+                       <img src="images/vizsla.jpg">
+                     </div>
+                     <div class="thlabel">Vizsla</div>
+                   </div>
+
+            </div>
+
+            <div id="jackrussel-terrier" class="running norunning hypoallergenic nonhypoallergenic mediumwalks anylength notservicedog smallsize anysize anyshed item"
+                  data-name="Jack Russell Terrier"
+                  data-text="Jack Russells are incredibly determined dogs who are very intelligent and highly trainable. While their determination
+                  can be exasperating to some, they make great watchdogs and best friends. They require a good deal of exercise and are great
+                  runners who also happen to be hypoallergenic.">
+
+                  <div class="th">
+                    <div class="thimg">
+                      <img src="images/jackrussel-terrier.jpg">
+                    </div>
+                    <div class="thlabel">Jack Russell Terrier</div>
+                  </div>
+            </div>
+
+            <div id="dalmation" class="running norunning nonhypoallergenic mediumwalks longwalks anylength notservicedog largesize anysize mediumshed anyshed item"
+                  data-name="Dalmation"
+                  data-text="Playful and outgoing, dalmations are high energy dogs who benefit from active owners. They are short-haired and
+                  medium-shedders, and their large size demands larger living quarters. They make excellent running companions.">
+
+                  <div class="th">
+                    <div class="thimg">
+                      <img src="images/dalmation.jpg">
+                    </div>
+                    <div class="thlabel">Dalmation</div>
+                  </div>
+            </div>
+
+            <div id="fox-terrier" class="running norunning hypoallergenic nonhypoallergenic mediumwalks anylength notservicedog smallsize anysize lightshed mediumshed anyshed item"
+                  data-name="Fox Terrier"
+                  data-text="These outgoing and inquisitive dogs are hypoallergenic, small in size, and make good running buddies.
+                  While their personalities can be higher maintenance at times, they make great companions and are light-shedders.">
+
+                  <div class="th">
+                    <div class="thimg">
+                      <img src="images/fox-terrier.jpg">
+                    </div>
+                    <div class="thlabel">Fox Terrier</div>
+                  </div>
+            </div>
+
+            <div id="pug" class="norunning nonhypoallergenic shortwalks anylength notservicedog smallsize anysize mediumshed anyshed item"
+                  data-name="Pug"
+                  data-text="Pugs are compact little dogs who love human companionship and often like to be the center of attention. Their small size makes them well-suited
+                  to apartment life, and they require one or two short walks per day.  They are moderate-shedders and excellent snugglers.">
+
+                  <div class="th">
+                    <div class="thimg">
+                      <img src="images/pug.jpg">
+                    </div>
+                    <div class="thlabel">Pug</div>
+                  </div>
+            </div>
+
+            <div id="basset-hound" class="norunning nonhypoallergenic shortwalks anylength notservicedog mediumsize anysize mediumshed anyshed item"
+                  data-name="Basset Hound"
+                  data-text="Low energy and sweet tempered, basset hounds require less exercise than most dogs their size: a short to moderate walk each day is usually sufficient.
+                  These soulful hounds are short-haired and medium shedders who have an excellent sense of smell (they were originally bred to be hunting dogs).">
+
+                  <div class="th">
+                    <div class="thimg">
+                      <img src="images/basset-hound.jpg">
+                    </div>
+                    <div class="thlabel">Basset Hound</div>
+                  </div>
+            </div>
+
+            <div id="beagle" class="norunning nonhypoallergenic mediumwalks long walks anylength notservicedog smallsize anysize mediumshed anyshed item"
+                  data-name="Beagle"
+                  data-text="Beagles are small, friendly and affectionate dogs who are known to have a stubborn streak.
+                   Requiring two medium length walks each day, beagles are moderate shedders who can usually handle an urban environment when given ample time outdoors.">
+
+                   <div class="th">
+                     <div class="thimg">
+                       <img src="images/beagle.jpg">
+                     </div>
+                     <div class="thlabel">Beagle</div>
+                   </div>
+            </div>
+
+            <div id="boxer" class="running norunning nonhypoallergenic mediumwalks longwalks anylength notservicedog mediumsize anysize mediumshed anyshed item"
+                  data-name="Boxer"
+                  data-text="Boxers are strong-willed working dogs who are loyal and intelligent. They require a decent amount
+                   of exercise and companionship, and the medium-sized pups are generally sweet tempered and can make great running buddies. Bonus: they don't shed too much.">
+
+                   <div class="th">
+                     <div class="thimg">
+                       <img src="images/boxer.jpg">
+                     </div>
+                     <div class="thlabel">Boxer</div>
+                   </div>
+            </div>
+
+            <div id="australian-cattle-dog" class="running norunning nonhypoallergenic longwalks anylength notservicedog mediumsize anysize lightshed anyshed item"
+                  data-name="Australian Cattle Dog"
+                  data-text="Australian cattle dogs are medium-sized, loyal and high energy dogs who are perfect for people with large yards and plenty of outdoor space. These light-shedders require a great deal of
+                  exercise and can make a great match for serious runners, but are generally not well suited to apartment life.">
+
+                  <div class="th">
+                    <div class="thimg">
+                      <img src="images/australian-cattle-dog.jpg">
+                    </div>
+                    <div class="thlabel">Australian Cattle Dog</div>
+                  </div>
+            </div>
+
+            <div id="golden-retriever" class="running norunning nonhypoallergenic mediumwalks longwalks anylength servicedog notservicedog mediumsize anysize anyshed item"
+                  data-name="Golden Retriever"
+                  data-text="While golden retrievers aren't always found in shelters, dogs who are part golden retriever are usually faithful, energetic and loving. They
+                  aren't hypoallergenic and are typically heavy shedders, but golden retrievers love getting plenty of exercise, and they make great family dogs and service dogs.">
+
+                  <div class="th">
+                    <div class="thimg">
+                      <img src="images/golden-retriever.jpg">
+                    </div>
+                    <div class="thlabel">Golden Retriever</div>
+                  </div>
+            </div>
+            <!--<p class="clickadog">click a dog to learn more</p>-->
+        </div>
+
+      </div>
+
+    </div> <!--END CONTAINER-->
+
+<!--begin test-->
+    <div class="infocontainer">
+      <div class="activecontent">
+        <span class="close">x</span>
+        <p id="dog-name"></p>
+      <p id="description"></p>
+      </div>
+    </div>
+<!--endtest-->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/petfilter.js"></script>
+
+
+  </body>
+</html>
